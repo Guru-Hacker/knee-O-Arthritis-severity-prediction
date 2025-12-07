@@ -1,6 +1,6 @@
 🦴 Knee Osteoarthritis Severity Classification using VGG16
 
-This project uses a pretrained VGG16 deep-learning model to classify knee X-ray images into three osteoarthritis severity levels:
+Used a pretrained VGG16 deep-learning model to classify knee X-ray images into three osteoarthritis severity levels:
 
 Healthy (combines KL-grades 0–2: Healthy, Doubtful, Minimal)
 
