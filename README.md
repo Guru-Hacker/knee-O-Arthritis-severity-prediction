@@ -14,7 +14,7 @@ The goal is to assist doctors in early-stage osteoarthritis diagnosis so that ti
 
 Uses VGG16 pretrained on ImageNet as the feature extractor
 
-Custom classification head with:
+**Custom classification head with:**
 
 Dual pooling (GAP + GMP)
 
@@ -36,7 +36,7 @@ Fine-tune full model with ultra-low LR
 
 Extensive data augmentation and class balancing
 
-Automatic:
+**Automatic:**
 
 Model checkpointing
 
@@ -44,7 +44,7 @@ Early stopping
 
 Learning rate scheduling
 
-Full evaluation pipeline with:
+**Full evaluation pipeline with:**
 
 Precision, Recall, AUC
 
