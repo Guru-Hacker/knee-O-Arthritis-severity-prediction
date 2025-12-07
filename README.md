@@ -1,2 +1,72 @@
-# knee O-Arthritis-dataset-with-severity 
-This project presents a deep learning–based system built using the pretrained VGG16 model, chosen for its strong performance on medical imaging tasks. The model classifies the X-ray images into three severity levels of Oeste arthritis:  Healthy (combines KL-grades 0–2: Healthy, Doubtful, Minimal) Moderate (KL-grade 3) Severe (KL-grade 4)  The primary goal of this project is to assist doctors in early diagnosis of arthritis, enabling them to recommend timely and effective preventive measures. For training and evaluation, we used Kellgren–Lawrence (KL) based severity grading datasets, which provided clear and reliable labels for different stages of O-arthritis, simplifying the annotation process.  This project demonstrates how transfer learning and convolutional neural networks can be effectively applied to medical image analysis to support clinical decision-making.
+🦴 Knee Osteoarthritis Severity Classification using VGG16
+
+This project uses a pretrained VGG16 deep-learning model to classify knee X-ray images into three osteoarthritis severity levels:
+
+Healthy (combines KL-grades 0–2: Healthy, Doubtful, Minimal)
+
+Moderate (KL-grade 3)
+
+Severe (KL-grade 4)
+
+The goal is to assist doctors in early-stage osteoarthritis diagnosis so that timely preventive measures can be recommended.
+
+✅ Key Features
+
+Uses VGG16 pretrained on ImageNet as the feature extractor
+
+Custom classification head with:
+
+Dual pooling (GAP + GMP)
+
+Four dense layers
+
+Five dropout layers (40–60%)
+
+L2 regularization + BatchNorm
+
+Four-phase progressive fine-tuning:
+
+Train top layers
+
+Unfreeze Block5
+
+Unfreeze Block4 & Block5
+
+Fine-tune full model with ultra-low LR
+
+Extensive data augmentation and class balancing
+
+Automatic:
+
+Model checkpointing
+
+Early stopping
+
+Learning rate scheduling
+
+Full evaluation pipeline with:
+
+Precision, Recall, AUC
+
+Confusion matrices
+
+ROC curves
+
+PR curves
+
+Per-class metrics
+
+Real-time autotest evaluation
+
+📊 Dataset
+
+We used the KL-based knee osteoarthritis severity dataset (KL grades 0–4).
+These labels made it easier to map the original 5 severity levels into the required 3 classes:
+
+KL Grade	Severity Used in This Project
+0, 1, 2	Healthy
+3	Moderate
+4	Severe
+🎉 Outcome
+
+The final model achieves high accuracy and balanced performance across all three classes, providing a reliable tool for assisting early arthritis diagnosis.
